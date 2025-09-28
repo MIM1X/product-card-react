@@ -1,9 +1,9 @@
 import React from 'react';
-import Gallery from './gallery';
-import Price from './price';
-import Quantity from './quantity';
-import Delivery from './delivery';
-import Popularity from './popularity.jsx';
+import Gallery from '../gallery/gallery.jsx';
+import Price from '../price/price.jsx';
+import Quantity from '../quantity/quantity.jsx';
+import Delivery from '../delivery/delivery.jsx';
+import Popularity from '../popularity/popularity.jsx';
 
 function Content({ product }) {
   return (

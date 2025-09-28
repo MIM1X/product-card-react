@@ -1,9 +1,9 @@
 import React from 'react';
-import Title from './title';
-import Article from './arcticle.jsx';
-import Content from './content.jsx';
-import Description from './description.jsx';
-import Comments from './comments.jsx';
+import Title from '../title/title.jsx';
+import Article from '../article/article.jsx';
+import Content from '../content/content.jsx';
+import Description from '../description/description.jsx';
+import Comments from '../comments/comments.jsx';
 
 function ProductCard({ product }) {
   return (

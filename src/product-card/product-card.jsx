@@ -8,8 +8,8 @@ import Comments from '../comments/comments.jsx';
 function ProductCard({ product }) {
   return (
     <section>
-      <Title text={product.title}></Title>
-      <Article text={product.number}></Article>
+      <Title>{product.title}</Title>
+      <Article>{product.number}</Article>
       <Content product={product}></Content>
       <Description text={product.description}></Description>
       <Comments comments={product.comments}></Comments>

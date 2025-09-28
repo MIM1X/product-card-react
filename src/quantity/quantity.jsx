@@ -1,11 +1,15 @@
 import React from 'react';
+import Button from '../button/button';
+import { StyledCounter, Value } from './styled';
 
 function Quantity({ quantity }) {
   return (
-    <p>
-      Количество: <button>-</button>
-      {quantity} <button>+</button>
-    </p>
+    <StyledCounter>
+      Количество:
+      <Button size='small'>-</Button>
+      <Value>{quantity}</Value>
+      <Button size='small'>+</Button>
+    </StyledCounter>
   );
 }
 

@@ -1,12 +1,15 @@
 import React from 'react';
+import { PriceWrapper, StyledOldPrice, StyledPrice } from './styled.js';
 
 function Price({ oldPrice = 0, newPrice }) {
   return (
-    <p>
+    <PriceWrapper>
       Цена:{' '}
-      {oldPrice === 0 || oldPrice <= newPrice ? null : <del>{oldPrice} ₽</del>}{' '}
-      <b>{newPrice} ₽</b>
-    </p>
+      {oldPrice === 0 || oldPrice <= newPrice ? null : (
+        <StyledOldPrice>{oldPrice} ₽</StyledOldPrice>
+      )}{' '}
+      <StyledPrice>{newPrice} ₽</StyledPrice>
+    </PriceWrapper>
   );
 }
 

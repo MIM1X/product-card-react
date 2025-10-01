@@ -1,7 +1,6 @@
-import React from 'react';
 import styled from 'styled-components';
 
-export const Button = styled.button`
+const Button = styled.button`
   padding: 0;
   border: none;
   cursor: pointer;
@@ -16,3 +15,5 @@ export const Button = styled.button`
     box-shadow: none;
   }
 `;
+
+export default Button;

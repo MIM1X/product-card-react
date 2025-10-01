@@ -2,12 +2,12 @@ import React from 'react';
 import Button from '../button/button';
 import { StyledCounter, Value } from './styled';
 
-function Quantity({ quantity }) {
+function Quantity({ children }) {
   return (
     <StyledCounter>
       Количество:
       <Button size='small'>-</Button>
-      <Value>{quantity}</Value>
+      <Value>{children}</Value>
       <Button size='small'>+</Button>
     </StyledCounter>
   );

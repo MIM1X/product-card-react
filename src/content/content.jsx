@@ -1,23 +1,37 @@
 import React from 'react';
 import Gallery from '../gallery/gallery.jsx';
-import Price from '../price/price.jsx';
-import Quantity from '../quantity/quantity.jsx';
-import Delivery from '../delivery/delivery.jsx';
 import Popularity from '../popularity/popularity.jsx';
-import Button from '../button/button';
+import {
+  ProductWrapper,
+  ProductInfo,
+  ProductInfoLine,
+  PageCounter,
+  BuyButton,
+  PageFullPrice,
+  DeliveryValue,
+} from './styled';
 
 function Content({ product }) {
   return (
-    <div style={{ display: 'flex' }}>
+    <ProductWrapper>
       <Gallery src={product.src} alt={product.alt}></Gallery>
-      <div>
-        <Price oldPrice={product.oldPrice} newPrice={product.newPrice}></Price>
-        <Quantity quantity={1}></Quantity>
-        <Delivery date={product.date}></Delivery>
-        <Button size='large'>Купить</Button>
-        <Popularity count={product.comments.length}></Popularity>
-      </div>
-    </div>
+      <ProductInfo>
+        <ProductInfoLine>
+          <PageFullPrice
+            oldPrice={product.oldPrice}
+            newPrice={product.newPrice}
+          />
+        </ProductInfoLine>
+        <ProductInfoLine>
+          <PageCounter>{1}</PageCounter>
+        </ProductInfoLine>
+        <ProductInfoLine>
+          <DeliveryValue>{product.date}</DeliveryValue>
+        </ProductInfoLine>
+        <BuyButton size='large'>Купить</BuyButton>
+        <Popularity count={product.comments.length} />
+      </ProductInfo>
+    </ProductWrapper>
   );
 }
 

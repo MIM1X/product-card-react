@@ -1,11 +1,11 @@
 import React from 'react';
 import Button from '../button/button';
 
-function Description({ text }) {
+function Description({ children }) {
   return (
     <div>
       <h2>Описание</h2>
-      {text}
+      {children}
       <Button>Подробнее</Button>
     </div>
   );

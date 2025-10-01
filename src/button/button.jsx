@@ -1,6 +1,5 @@
-import React from 'react';
 import styled from 'styled-components';
-import { Button as ElemButton } from '../elements/button';
+import { default as ElemButton } from '../elements/button';
 
 const buttonOptions = {
   large: {

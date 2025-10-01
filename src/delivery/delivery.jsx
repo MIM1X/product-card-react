@@ -1,7 +1,7 @@
 import React from 'react';
 
-function Delivery({ date }) {
-  return <p>Доставка: {date}</p>;
+function Delivery({ children }) {
+  return <p>Доставка: {children}</p>;
 }
 
 export default Delivery;

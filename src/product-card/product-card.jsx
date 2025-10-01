@@ -1,4 +1,5 @@
 import React from 'react';
+import { StyledProductPage, Header } from './styled.js';
 import Title from '../title/title.jsx';
 import Article from '../article/article.jsx';
 import Content from '../content/content.jsx';
@@ -7,13 +8,13 @@ import Comments from '../comments/comments.jsx';
 
 function ProductCard({ product }) {
   return (
-    <section>
-      <Title>{product.title}</Title>
+    <StyledProductPage>
+      <Header>{product.title}</Header>
       <Article>{product.number}</Article>
       <Content product={product}></Content>
-      <Description text={product.description}></Description>
+      <Description>{product.description}</Description>
       <Comments comments={product.comments}></Comments>
-    </section>
+    </StyledProductPage>
   );
 }
 

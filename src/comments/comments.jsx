@@ -4,7 +4,6 @@ import Button from '../button/button';
 function Comments({ comments }) {
   return (
     <div>
-      <h2>Комментарии</h2>
       <ul>
         {comments.map((comment) => {
           return (

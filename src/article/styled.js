@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledArticle = styled.small`
-  color: #888;
+  color: ${(props) => props.theme.textColorMuted};
   font-size: 12px;
 `;
 

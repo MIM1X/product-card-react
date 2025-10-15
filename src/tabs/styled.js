@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Title from '../title/title';
 
 export const TitleList = styled.div`
   display: inline-flex;
@@ -9,17 +10,27 @@ export const TitleList = styled.div`
 `;
 
 export const TitleButton = styled.button`
-  background: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
   border: none;
   cursor: pointer;
-  padding: 10px;
+  box-shadow: none;
+  display: block;
+  background-color: ${(props) => (props.active ? '#CCC' : 'none')};
 `;
 
-export const TitleText = styled.span`
-  font-weight: bold;
-  padding: 10px;
+export const TitleText = styled(Title)`
+  color: ${(props) =>
+    props.active ? props.theme.textColor : props.theme.textColorMuted};
 `;
 
 export const Content = styled.div`
-  padding: 10px;
+  border: 1px solid #ddd;
+  padding: ${(props) => props.theme.indent};
+  line-height: 1.5;
+  font-size: 16px;
+  box-sizing: border-box;
+  text-align: left;
 `;

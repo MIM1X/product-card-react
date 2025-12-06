@@ -1,11 +1,15 @@
 import React from 'react';
-import Button from '../button/button';
+import { DescriptionButton } from './styled';
 
 function Description({ children }) {
   return (
     <div>
       {children}
-      <Button>Подробнее</Button>
+      <DescriptionButton
+        onClick={() => console.log('скрытие/открытие всего текста')}
+      >
+        Подробнее
+      </DescriptionButton>
     </div>
   );
 }

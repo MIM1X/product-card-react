@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Gallery from '../gallery/gallery.jsx';
 import Popularity from '../popularity/popularity.jsx';
 import {
@@ -12,23 +12,33 @@ import {
 } from './styled';
 
 function Content({ product }) {
+  const [productCount, setProductCount] = useState(1);
   return (
     <ProductWrapper>
       <Gallery src={product.src} alt={product.alt}></Gallery>
       <ProductInfo>
         <ProductInfoLine>
           <PageFullPrice
-            oldPrice={product.oldPrice}
-            newPrice={product.newPrice}
+            oldPrice={product.oldPrice * productCount}
+            newPrice={product.newPrice * productCount}
           />
         </ProductInfoLine>
         <ProductInfoLine>
-          <PageCounter>{1}</PageCounter>
+          <PageCounter
+            value={productCount}
+            onChange={setProductCount}
+            minValue={1}
+          />
         </ProductInfoLine>
         <ProductInfoLine>
           <DeliveryValue>{product.date}</DeliveryValue>
         </ProductInfoLine>
-        <BuyButton size='large'>Купить</BuyButton>
+        <BuyButton
+          onClick={() => console.log('открытие окна оформления заказа')}
+          size='large'
+        >
+          Купить
+        </BuyButton>
         <Popularity count={product.comments.length} />
       </ProductInfo>
     </ProductWrapper>
